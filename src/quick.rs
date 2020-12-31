@@ -3,6 +3,9 @@ pub fn sort(input: &mut Vec<i32> ) {
 }
 
 fn sort_util(input: &mut Vec<i32>, start: usize, end: usize) {
+	if start == end {
+		return ();
+	}
     let mut s = start;
     let mut e = end;
     let pivot_elem = input[(s+e)/2];
