@@ -138,5 +138,19 @@ mod test {
 
    }
 
+    #[test]
+   fn check_surpasser() {
+
+       let array_to_sort = vec![2,7,5,5,2,7,0,8,1];
+
+       let (index_arr, s_arr) = merge::surpassers(&array_to_sort);
+
+
+       assert_eq!(index_arr,vec![6,8,4,0,3,2,5,1,7]);
+       assert_eq!(s_arr,vec![5,1,2,2,2,1,2,0,0]);
+
+
+   }
+
 
 }
